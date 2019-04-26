@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Train Schedule</title>
+    <link rel='stylesheet' href='assets/css/style.css'>
+    <script src='https://code.jquery.com/jquery.js'></script>
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+</head>
+
+<body>
+        <h3>Train Schedule</h3>
+            <div class='trainInfo'>
+                <h4>Current Train Schedule</h4>
+                <table id='trainTable'>
+                    <thead>
+                        <tr>
+                            <th>Train Name</th>
+                            <th>Destination</th>
+                            <th>Frequency (minutes)</th>
+                            <th>Next Arrival</th>
+                            <th>Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+        <div>
+            <div>
+                <h4>Add Your Train</h4>
+                <form>
+                    <div>
+                        <input type="text" class="validate" id="trainNameInput">
+                        <label for="">Train Name</label>
+                    </div>
+                    <div>
+                        <input type="text" class="validate" id="destinationInput">
+                        <label for="">Destination</label>
+                    </div>
+                    <div>
+                        <input type="time" class="validate" id="firstInput">
+                        <label class='active' for="">First Train (Military Time)</label>
+                    </div>
+                    <div>
+                        <input type="number" class="validate" id="frequencyInput">
+                        <label for="">Frequency (Minutes)</label>
+                    </div>
+                    <button type="submit" class="btn" id="addTrainBtn">Submit</button>
+                </form>
+            </div>
+        </div>
+	</div>
+	<script>
+			// Initialize Firebase
+			var config = {
+			  apiKey: "AIzaSyCu2llehpkeRo_qJi7VoDR1XZjKT4jcjWQ",
+			  authDomain: "train-kyle.firebaseapp.com",
+			  databaseURL: "https://train-kyle.firebaseio.com",
+			  projectId: "train-kyle",
+			  storageBucket: "train-kyle.appspot.com",
+			  messagingSenderId: "380676459796"
+			};
+			firebase.initializeApp(config);
+		  </script>
+	<script type='text/javascript' src='assets/javascript/javascript.js'></script>
+	
+
+</body>
+</html>
